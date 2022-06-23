@@ -1,0 +1,16 @@
+version: "3"
+services:
+  postgres:
+    image: postgres
+    container_name: "desafio-java-postgres"
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=desafio-java
+      - POSTGRES_PASSWORD=desafio-java
+      - POSTGRES_DB=desafio-java
+    volumes:
+      - desafiopgdata:/var/lib/postgresql/data
+
+volumes:
+  desafiopgdata:
