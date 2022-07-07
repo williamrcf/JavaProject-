@@ -9,20 +9,25 @@ import javax.persistence.Table;
 import java.time.Instant;
 import java.util.UUID;
 
-
-@Entity
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
+@Entity
 @Table (name = "lotacao")
 public class Lotacao {
 
-
     @Id
-    public UUID id;
+    private UUID id;
     @Column
-    public String tipo;
+    private String tipo;
     @Column (name = "data_cadastro")
-    public Instant dataCadastro;
+    private Instant dataCadastro;
 
 }
+
+
+
+
 

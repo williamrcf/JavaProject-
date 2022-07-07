@@ -23,4 +23,10 @@ public class Servidor {
     public Date dataDeCadastro;
     @Column
     public UUID lotacao;
+
+    public Servidor(Date dataDeCadastro, String nome) {
+        this.dataDeCadastro = dataDeCadastro;
+        this.nome = nome;
+    }
 }
+
